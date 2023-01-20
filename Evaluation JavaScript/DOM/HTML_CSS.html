@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM [ html css]</title>
+</head>
+<body>
+    <!-- DOM HTML -->
+    <!-- Exemple 1 -->
+    <p id="p">Bonjour</p>
+    <script>
+        const element=document.getElementById("p");
+        element.innerHTML="Je suis Aicha";
+    </script>
+
+    <!-- Exemple 2-->
+    <!-- <script>
+        document.write(Date());
+    </script> -->
+    <!-- Exemple 3 -->
+
+    <!-- <img id="img" src="images(1).jpg">
+    <script>
+        document.getElementById("img").src('images(1).jpg');
+    </script> -->
+
+    <!-- Exemple 4 afficher photo + titre-->
+   
+    <!-- <div id="image">
+        <p id="p1"></p>
+        <img src="images.jpg" id="id1">
+    </div>
+    <script>
+      
+        const element=document.getElementById('image');
+        element.src="images.jpg";
+    </script>
+ <script>
+      document.getElementById('p1').innerHTML="bonjour tout le monde ";
+ </script> -->
+    <!-- Exemple 5  remplacer photo-->
+    <!-- <div>
+        <img src="images.jpg" id="aa" >
+    </div>
+    <script>
+        document.getElementById('aa').src="images(1).jpg";
+    </script> -->
+    <!-- CSS DOM -->
+
+    <!-- Exemple 1-->
+    <p id="p2"> Bonjour toutle monde </p>
+    <script>
+        document.getElementById('p2').style.color='red';
+    </script> 
+    <!-- Exemple 2-->
+    <p id="p3"> Je suis Aicha</p>
+    <button id="btn" type="button" onclick="getElementById('p3').style.color='blue'">colorer</button>
+    <!-- Exemple 3-->
+    
+    <!-- Exemple 4-->
+    <!-- Exemple 5-->
+    
+</body>
+</html>

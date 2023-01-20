@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noeuds DOM Liste noeuds</title>
+</head>
+<body>
+    <!-- les noeuds DOM -->
+    <!-- Exemple 1 ajoue-->
+     <div id="div">
+        <p id="p1"> Bonjour tout le monde</p>
+     </div>
+     <script>
+        const para=document.createElement("p");
+        const node=document.createTextNode("je suis aicha");
+        para.appendChild(node);
+        const element=document.getElementById('div');
+        element.appendChild(para);
+     </script>
+    <!-- Exemple 2 suppression-->
+    <div id="div1">
+        <p id="p2"> Bonjour</p>
+        <p id="p3"> Je suis aicha</p>
+    </div>
+    <script>
+        const parent=document.getElementById("div1");
+        const enfant=document.getElementById("p3");
+        parent.removeChild(enfant);
+    </script>
+    <!-- Exemple 3 remplacement d'un element html-->
+    <div id="div2">
+        <p id="p4">Bonjour tout le monde </p>
+        <p id="p5"> je suis Aicha</p>
+    </div>
+    <script>
+        const para1=document.createElement("p");
+        const node1=document.createTextNode('je suis youssef');
+        para1.appendChild(node1);
+        const parent1=document.getElementById("div2");
+        const child1=document.getElementById('p5');
+        parent1.replaceChild(para1,child1);
+
+    </script>
+    <!-- Exemple 4-->
+    <div id="div3">
+        <p id="p6"> je suis aicha </p>
+        <p id="p7"> je suis youssef</p>
+    </div>
+    <script>
+        const para2=document.createElement("p");
+        const node2=document.createTextNode("bonjour");
+        para2.appendChild(node2);
+        const parent2=document.getElementById("div3");
+        const child2=document.getElementById('p7');
+        parent2.insertBefore(para2,child2);
+    </script>
+    <!-- Exemple 5-->
+    <!-- <div id="tt">
+    </div>
+    <script>
+        const image=document.createElement('img');
+        const par=document.getElementById("tt");
+        rar.appendChild(image);
+    </script> -->
+    <!-- Exemple 6-->
+    
+</body>
+</html>

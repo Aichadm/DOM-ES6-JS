@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+<!-- ///////////////////////////////////////les manieres d'affichage en JS /////////////////////// -->
+<!-- // La methode InnerHTML => Propriete definit le contenu HTML -->
+<p id="p1"></p>
+
+<script>
+    document.getElementById('p1').innerHTML=5+7;
+</script>
+<script>
+    document.getElementById('p1').innerHTML="Bonjour tout le monde ";
+</script>
+
+<!-- ///////////////////////////////////////les manieres d'affichage en JS /////////////////////// -->
+<!-- // La methode document.write() => methode supprimera tout le code HTML existant ,donc document.write() ne doit etre utilisee qu'a des fins des tests-->
+<p id="p2"></p>
+<script>
+    document.write(2+9);
+</script>
+<button type="button" onclick="document.write(4+9)">Btn somme</button>
+<button type="button" onclick="document.write('Je suis Aicha')"> Btn present</button>
+<!-- ///////////////////////////////////////les manieres d'affichage en JS /////////////////////// -->
+<!-- // La methode window.alert() => Boite d'alert pour afficher les donnees  << la specification mot cle window est facultative>> -->
+<p id="p3"></p>
+<script>
+    window.alert(5+0);
+</script>
+<script>
+    window.alert("bonjour je suis Aicha");
+</script>
+<button type="button" onclick="window.alert('bonjour je suis aicha')"> cliquer ici </button>
+<!-- ///////////////////////////////////////les manieres d'affichage en JS /////////////////////// -->
+<!-- La methode console.log() => on l'utilise precisement en debuguage , on peut l'appeler dans le navigateur poer afficher les donnees  -->
+<p id="p4"></p>
+<script>
+    console.log(3+5);
+</script>
+<button type="button" onclick="console.log(7+3)">Somme</button>
+<!-- ///////////////////////////////////////les manieres d'affichage en JS /////////////////////// -->
+<!-- La methode window.print() => pour imprimer  une page  -->
+<button type="button" onclick="window.print()"> imprimer</button>
+
+</body>
+</html>

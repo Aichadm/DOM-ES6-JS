@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <!-- les methodes DOM -->
+    <!-- presentation => l'interface de programmation constitue de deux composants:
+
+      -> Les propriétes : les valeures qui peuvent obtenir ou definir dans html .
+      -> Les methodes :les actions qui peuvent effectuer sur html . -->
+    <!-- Exemple -->
+       <p id="p"></p>
+       <script>
+        document.getElementById("p").innerHTML="Bonjour tout l monde";
+       </script>
+    <!-- Exemple -->
+         <p id="p1"></p>
+         <script>
+            document.write(5+1);
+         </script>
+    <!-- Exemple -->
+            
+        <button type="button" onclick="window.alert('je suis Aicha')">afficher</button>
+ 
+    <!-- les evenements DOM -->
+    <!-- Apprend à rechercher et à accéder aux éléments HTML d'une page HTML. -->
+    <!-- Exemple -->
+         <p id="p2"> Bonjour tout le monde </p>
+         <p id="p3"></p>
+         <script>
+          const element=  document.getElementById("p2");
+            document.getElementById("p3").innerHTML="je suis aicha :" + element.innerHTML;
+         </script>
+    <!-- Exemple -->
+            <div id="main ">
+                <p> Bonjour tout le monde </p>
+                <p> je suis Aicha</p>
+            </div> 
+            <p id="p4"></p>
+            <script>
+                const x = document.getElementById("main");
+                const y = x.getElementsByTagName("p").innerHTML;
+                document.getElementById("p4").innerHTML="le contenaire(index 0)'main' is :" + y[0].innerHTML;
+            </script>
+    <!-- Exemple -->
+            <p class="intro"> Bonjour tout le monde</p>
+            <p class="intro"> je suis Aicha</p>
+            <p id="p5"></p>
+            <script>
+                const s= document.getElementsByClassName("intro");
+                document.getElementById("p5").innerHTML=' avec nom de classe "intro"  :' + s[0].innerHTML;
+            </script>
+    <!-- Exemple -->
+                  <form id="form1" >
+                  Nom: <input type="text" name="nom" value="ben ayad">;
+                  Prenom : <input type="text" name="prenom" value="aicha">;
+                  <input type="submit" value="ajouter">
+                  </form> 
+                  <p id="p6"></p>
+                  <script>
+                    const d= document.forms("form1");
+                    let text="";
+                    for(let i=0; i<d.length;i++){
+                        text+=d.elements[i].value +"<br>";
+                    }
+                    document.getElementById("p6").innerHTML=text;
+                  </script>
+
+    <!-- Exemple -->   
+    
+     <!-- Exemple -->
+</body>
+</html>

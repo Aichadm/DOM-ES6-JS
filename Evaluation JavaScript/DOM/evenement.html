@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les evenements</title>
+</head>
+
+<body>
+    <!-- Exemple 1 clique texte -->
+    <h2 id="txt" onclick="this.innerHTML='Je suis Aicha'"> Bonjour</h2>
+    <script>
+        document.getElementById('txt').style.color = 'green';
+    </script>
+
+    <!-- Exemple 2 changer le texte avec fonction-->
+    <h1 id="h" onclick="changer(this)">Bonjour</h1>
+    <script>
+        function changer(id) {
+            id.innerHTML = "Je suis Aicha"
+        }
+        document.getElementById('h').style.color = 'red';
+    </script>
+    <!-- Exemple 3 btn date-->
+    <p id="p"></p>
+    <button id="btn1"> date</button>
+    <script>
+        document.getElementById('btn1').onclick = DisplayDate;
+        function DisplayDate() {
+            document.getElementById('p').innerHTML = Date();
+        }
+    </script>
+    <!-- Exemple 4 Majescule-->
+    <div>
+        Nom:<input type="text" id="npt" onchange="changer()" />
+    </div>
+    <script>
+        function changer() {
+            const x = document.getElementById('npt');
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+    <!-- les ecouteurs des evenements-->
+    <!-- Exemple  -->
+    <button id="btn2"> Bonjour</button>
+    <script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+        document.getElementById('btn2').addEventListener("click",function(){ alert("Bonjour tout le monde")})
+    </script>
+    <!-- Exemple -->
+    <button id="btn3"> bonjour</button>
+     <script>
+     function annonce(){
+        alert("bonjour tout lee monde");
+     }
+     function annoncee()
+     {
+        alert("je suis Aicha");
+     }
+    var r= document.getElementById('btn3');
+    r.addEventListener("click",annonce);
+    r.addEventListener("click",annoncee);
+    </script>
+    <!-- Exemple -->
+    
+     <select  id="select" onchange="choisir()">
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="MERCEDIS">MERCEDIS</option>
+        <option value="FERARI">FERARI</option>
+     </select>
+     <p id="rr"></p>
+     <script>
+        function choisir(){
+            var h=document.getElementById("select").value;
+            document.getElementById("rr").innerHTML= "le mot choisi est : " +h;
+        }
+     </script>
+    <!-- Exemple -->
+    <!-- Exemple -->
+
+</body>
+
+</html>

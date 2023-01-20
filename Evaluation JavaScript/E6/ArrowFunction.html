@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functon</title>
+</head>
+<body>
+    <p id="p"></p>
+    <script>
+        const a=(x,y)=>x*y;
+        document.getElementById('p').innerHTML=a(2,5);
+    </script> 
+    <p id="p1" onclick="afficher()">cliquer ici</p>
+    <button type="button" onclick="afficher()"> afficher</button>
+    <script>
+    afficher=()=>{
+        alert('bonjour tout le monde');
+    }
+    </script>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+        const voiture=["ferary","mercedes","bmw","audi"];
+        const voiture1=["ferary","mercedes","bmw",..."audi"];
+        document.getElementById('p2').innerHTML=voiture;
+        document.getElementById('p3').innerHTML=voiture1;
+    </script>
+    <P id="p4"></P>
+    <script>
+        const titre=[12,56,78,90,123];
+        let maxValue1=Math.max(...titre);
+
+        document.getElementById("p4").innerHTML=maxValue1;
+    </script>
+    <p id="p5"></p>
+    <script>
+        const v="JavaScript";
+        let text="";
+        for(let s of v )
+        {
+            text+=s+'</br>';
+        }
+        document.getElementById('p5').innerHTML=text;
+    </script>
+    <p id="p6"></p>
+    <script>
+        const noms= new Map([["aicha",23],["youssef",22],["hamida",33]
+    ]);
+    document.getElementById("p6").innerHTML=noms.get('youssef');
+    </script>
+    <p id="p7"></p>
+    <script>
+        const nom= new Set();
+        nom.add('aicha');
+        nom.add('youssef');
+        nom.add('fatima');
+        nom.add('yassine');
+        // nom.add("a","b","c","d");
+        document.getElementById('p7').innerHTML=nom.size;
+    </script>
+
+<p id="p8"></p>
+<script>
+    const nom1=["aicha","youssef","nouh"];
+    const ob=nom1.entries();
+    for(let x of ob){
+        document.getElementById('p8').innerHTML+=x +"<br>";
+    }
+</script>
+
+
+
+</body>
+</html>
